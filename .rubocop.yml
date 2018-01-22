@@ -1,0 +1,9 @@
+Metrics/LineLength:
+  Max: 160
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/MixinUsage:
+  Enabled: false
+
