@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :track do
-    title "MyString"
-    file "MyString"
+    sequence(:title) { |n| "Song_#{n}" }
+    file 'file'
   end
 end
