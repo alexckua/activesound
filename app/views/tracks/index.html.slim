@@ -1,1 +1,2 @@
-h1 Songs
+- if @tracks.present?
+  = react_component 'IndexTracks', props: { data: @tracks }
