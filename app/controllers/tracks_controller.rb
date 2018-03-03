@@ -1,10 +1,17 @@
 class TracksController < ApplicationController
-  def index
-    @tracks = Track.all
+  respond_to :json
 
-    respond_to do |format|
-      format.html { @tracks }
-      format.json { render json: @tracks }
-    end
+  def index
+    respond_with Track.all
+  end
+
+  def create
+    respond_with Track.create(track_params)
+  end
+
+  private
+
+  def track_params
+    params.require(:track).permit(:title, :file)
   end
 end
