@@ -304,6 +304,7 @@ DEPENDENCIES
   rails (~> 5.1.4)
   rails-controller-testing
   react_on_rails (= 10.0.0)
+  responders
   rspec-rails (~> 3.7)
   rubocop
   sass-rails (~> 5.0)
