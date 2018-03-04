@@ -1,4 +1,5 @@
 class TracksController < ApplicationController
+  before_action :authenticate_user!, only: :create
   respond_to :json
 
   def index
