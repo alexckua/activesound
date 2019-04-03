@@ -6,4 +6,7 @@ Style/ClassAndModuleChildren:
   Enabled: false
 Style/MixinUsage:
   Enabled: false
-
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 15
