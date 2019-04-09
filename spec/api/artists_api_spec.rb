@@ -23,7 +23,7 @@ describe 'ArtistsAPI' do
         }
       end
 
-      it 'show found places' do
+      it 'show found partists' do
         subject
         expect(response.status).to eq 200
         expect(json_body[0][:name]).to eq artist.name

@@ -4,6 +4,7 @@ class ApplicationAPI < Grape::API
   default_format :json
 
   mount ArtistsAPI
+  mount TracksAPI
 
   add_swagger_documentation(
     base_path: '/api',
