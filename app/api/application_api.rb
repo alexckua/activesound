@@ -3,6 +3,12 @@ class ApplicationAPI < Grape::API
   content_type :json, 'application/json'
   default_format :json
 
+  helpers do
+    def paginate(relation)
+      relation.page(params[:page]).per(params[:count])
+    end
+  end
+
   mount ArtistsAPI
   mount TracksAPI
 
