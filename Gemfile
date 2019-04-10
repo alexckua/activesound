@@ -29,7 +29,7 @@ gem 'swagger-docs'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
-group :development, :test do
+group :development, :test, :staging do
   gem 'airborne'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
