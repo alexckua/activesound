@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :track do
-    sequence(:title) { |n| "Song_#{n}" }
+    artist
+    title { Faker::Lorem.sentence }
   end
 end

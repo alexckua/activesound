@@ -3,6 +3,15 @@ class ApplicationAPI < Grape::API
   content_type :json, 'application/json'
   default_format :json
 
+  helpers do
+    def paginate(relation)
+      relation.page(params[:page]).per(params[:count])
+    end
+  end
+
+  mount ArtistsAPI
+  mount TracksAPI
+
   add_swagger_documentation(
     base_path: '/api',
     api_version: 'v1',
