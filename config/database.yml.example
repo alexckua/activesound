@@ -83,3 +83,9 @@ production:
   database: activesound_production
   username: activesound
   password: <%= ENV['ACTIVESOUND_DATABASE_PASSWORD'] %>
+
+staging:
+  <<: *default
+  database: activesound_staging
+  username: activesound
+  password: <%= ENV['ACTIVESOUND_DATABASE_PASSWORD'] %>
