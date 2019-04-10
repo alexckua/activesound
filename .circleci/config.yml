@@ -37,6 +37,9 @@ jobs:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
+      # Secrets setup
+      - run: cp config/secrets.yml.example config/secrets.yml
+
       # Database setup
       - run: cp config/database.yml.example config/database.yml
       - run: bundle exec rake db:create
