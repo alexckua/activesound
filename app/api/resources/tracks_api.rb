@@ -14,7 +14,7 @@ class TracksAPI < Grape::API
       search = Track.ransack(params[:q])
       search.sorts = 'title'
       tracks = search.result
-      present paginate(tracks)
+      present paginate(tracks), with: TrackEntity
     end
   end
 end
