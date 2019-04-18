@@ -16,6 +16,7 @@ gem 'grape'
 gem 'grape-entity'
 gem 'grape-swagger'
 gem 'grape-swagger-rails'
+gem 'graphql', '~> 1.9.4'
 gem 'jwt'
 gem 'kaminari'
 gem 'mime-types', require: 'mime/types/full'
@@ -46,3 +47,5 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
 end
+
+gem 'graphiql-rails', group: :development
