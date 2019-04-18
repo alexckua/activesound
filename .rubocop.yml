@@ -18,3 +18,5 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Metrics/MethodLength:
   Max: 15
+Naming/UncommunicativeMethodParamName:
+  Enabled: false
