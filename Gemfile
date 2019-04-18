@@ -12,10 +12,6 @@ gem 'carrierwave'
 gem 'carrierwave-audio'
 gem 'carrierwave-base64'
 gem 'devise'
-gem 'grape'
-gem 'grape-entity'
-gem 'grape-swagger'
-gem 'grape-swagger-rails'
 gem 'graphql', '~> 1.9.4'
 gem 'jwt'
 gem 'kaminari'
@@ -27,7 +23,6 @@ gem 'rack-cors'
 gem 'rails', '~> 5.2.2'
 gem 'ransack'
 gem 'slim-rails'
-gem 'swagger-docs'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
@@ -36,6 +31,7 @@ group :development, :test, :staging do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'graphiql-rails'
   gem 'pry-rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.8'
@@ -47,5 +43,3 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
 end
-
-gem 'graphiql-rails', group: :development
