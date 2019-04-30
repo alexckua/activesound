@@ -4,8 +4,7 @@ class GraphqlController < ApplicationController
     query = params[:query]
     operation_name = params[:operationName]
     context = {
-      # Query context goes here, for example:
-      # current_user: current_user,
+      current_user: current_user
     }
     result = ActivesoundSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
@@ -40,5 +39,13 @@ class GraphqlController < ApplicationController
     logger.error e.backtrace.join("\n")
 
     render json: { error: { message: e.message, backtrace: e.backtrace }, data: {} }, status: 500
+  end
+
+  def current_user
+    return nil if request.headers['Authorization'].blank?
+    token = request.headers['Authorization'].split(' ').last
+    return nil if token.blank?
+    result = TokenService.decode_data(token)
+    User.find_by(id: result[:user_id])
   end
 end
