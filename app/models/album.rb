@@ -6,7 +6,11 @@ class Album < ApplicationRecord
 
   validates :title, :description, presence: true
 
-  def avatarcover_url
-    cover.try(:service_url)
+  def attachment_url
+    if Rails.application.config.active_storage.service == :amazon
+      return cover.try(:service_url)
+    else
+      Rails.application.routes.url_helpers.rails_blob_path(cover, only_path: true) if cover.attached?
+    end
   end
 end

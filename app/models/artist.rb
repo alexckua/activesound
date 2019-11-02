@@ -6,7 +6,7 @@ class Artist < ApplicationRecord
 
   validates :title, :description, presence: true
 
-  def avatar_url
+  def attachment_url
     if Rails.application.config.active_storage.service == :amazon
       return avatar.try(:service_url)
     else

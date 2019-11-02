@@ -1,0 +1,8 @@
+= semantic_form_for [:admin, @album], builder: ActiveAdmin::FormBuilder do |f|
+  = f.inputs do
+    = f.input :title
+    = f.input :description
+    = f.input :artist, as: :select, collection: Artist.pluck(:title, :id)
+    = image_tag @album.cover_url if @album.cover_url
+    = f.input :cover, as: :file
+    = f.actions
