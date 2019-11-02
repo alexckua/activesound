@@ -1,6 +1,6 @@
 class Artist < ApplicationRecord
-  has_many :song
-  has_many :album
+  has_many :songs
+  has_many :albums
 
   has_one_attached :avatar
 
