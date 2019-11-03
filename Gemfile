@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+gem 'active_material', github: 'vigetlabs/active_material'
 gem 'activeadmin'
 gem 'awesome_print'
 gem 'aws-sdk-s3', require: false

@@ -3,6 +3,6 @@
     = f.input :title
     = f.input :artist, as: :select, collection: Artist.pluck(:title, :id)
     = f.input :album, as: :select, collection: Album.pluck(:title, :id)
-    = link_to @song.avatar_url if @song.attachment_url
+    = link_to @song.attachment_url if @song.attachment_url
     = f.input :track, as: :file
     = f.actions

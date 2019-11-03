@@ -3,6 +3,6 @@
     = f.input :title
     = f.input :description
     = f.input :artist, as: :select, collection: Artist.pluck(:title, :id)
-    = image_tag @album.cover_url if @album.cover_url
+    = image_tag @album.attachment_url if @album.attachment_url
     = f.input :cover, as: :file
     = f.actions
